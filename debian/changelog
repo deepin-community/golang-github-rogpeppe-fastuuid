@@ -1,5 +1,24 @@
-template-repository (1.0-1) unstable; urgency=medium
+golang-github-rogpeppe-fastuuid (0.0~git20150106.0.6724a57-2.1) unstable; urgency=medium
 
-  * Initial release
+  * Non maintainer upload by the Reproducible Builds team.
+  * No source change upload to rebuild on buildd with .buildinfo files.
 
- -- Tsic404 <liuheng@deepin.org>  Sat, 28 Jan 2023 13:46:49 +0800
+ -- Holger Levsen <holger@debian.org>  Tue, 05 Jan 2021 01:09:38 +0100
+
+golang-github-rogpeppe-fastuuid (0.0~git20150106.0.6724a57-2) unstable; urgency=medium
+
+  * Build-Depends on golang-any instead of golang-go
+    and remove unnecessary Depends on golang-go from -dev package
+  * Use debhelper (>= 10)
+  * Bump Standards-Version to 4.0.0:
+    Use https form of the copyright-format URL in debian/copyright
+  * Add "Testsuite: autopkgtest-pkg-go" to debian/control
+  * Add myself to the list of Uploaders
+
+ -- Anthony Fok <foka@debian.org>  Sat, 29 Jul 2017 01:32:52 -0600
+
+golang-github-rogpeppe-fastuuid (0.0~git20150106.0.6724a57-1) unstable; urgency=medium
+
+  * Initial release (Closes: #830526).
+
+ -- Dmitry Smirnov <onlyjob@debian.org>  Sat, 09 Jul 2016 12:46:53 +1000

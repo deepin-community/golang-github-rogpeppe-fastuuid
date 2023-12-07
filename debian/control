@@ -1,15 +1,26 @@
-Source: template-repository
-Section: unknown
-Priority: optional
-Maintainer: Tsic404 <liuheng@deepin.org>
-Build-Depends: debhelper (>= 11)
-Standards-Version: 4.1.3
-Homepage: https://github.com/deepin-community/template-repository
-#Vcs-Browser: https://salsa.debian.org/debian/deepin-community-template-repository
-#Vcs-Git: https://salsa.debian.org/debian/deepin-community-template-repository.git
+Source: golang-github-rogpeppe-fastuuid
+Section: devel
+Priority: extra
+Maintainer: Debian Go Packaging Team <pkg-go-maintainers@lists.alioth.debian.org>
+Uploaders: Dmitry Smirnov <onlyjob@debian.org>,
+           Anthony Fok <foka@debian.org>
+Build-Depends: debhelper (>= 10),
+               dh-golang,
+               golang-any
+Standards-Version: 4.0.0
+Homepage: https://github.com/rogpeppe/fastuuid
+Vcs-Browser: https://anonscm.debian.org/cgit/pkg-go/packages/golang-github-rogpeppe-fastuuid.git
+Vcs-Git: https://anonscm.debian.org/git/pkg-go/packages/golang-github-rogpeppe-fastuuid.git
+XS-Go-Import-Path: github.com/rogpeppe/fastuuid
+Testsuite: autopkgtest-pkg-go
 
-Package: template-repository
-Architecture: any
-Depends: ${shlibs:Depends}, ${misc:Depends}
-Description: <insert up to 60 chars description>
- <insert long description, indented with spaces>
+Package: golang-github-rogpeppe-fastuuid-dev
+Architecture: all
+Depends: ${shlibs:Depends},
+         ${misc:Depends}
+Description: fast generation of 192-bit UUIDs
+ Package fastuuid provides fast UUID generation of 192 bit universally
+ unique identifiers. It does not provide formatting or parsing of
+ the identifiers (it is assumed that a simple hexadecimal or base64
+ representation is sufficient, for which adequate functionality exists
+ elsewhere).
